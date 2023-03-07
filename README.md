@@ -6,7 +6,23 @@ Turnos con bot de whatsapp
 npm i
 ```
 
-## Correr el bot
+## Crear tsconfig
 ```
-node index.js
+npx tsc --init
+```
+
+## Correr con typescript
+```
+npx tsc
+```
+
+## Correr el bot(dev)
+```
+npm run dev
+```
+
+## Correr el bot(prod)
+```
+npm run build
+npm start
 ```
