@@ -11,11 +11,15 @@ client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
 });
 
-client.on('ready', (message) => {
+client.on('ready', () => {
     console.log('Client is ready!');
-    if(message.body === "hola mundo") {
-      client.sendMessage(message.from, "Hola soy un bot")
-    }
 });
+
+client.on("message", (message) => {
+    console.log(message)
+    if(message.body === "hola mundo") {
+        client.sendMessage(message.from, "Hola soy un bot")
+    }
+})
 
 client.initialize();
