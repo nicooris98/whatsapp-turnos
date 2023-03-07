@@ -16,7 +16,6 @@ client.on('ready', () => {
 });
 
 client.on("message", (message) => {
-    console.log(message)
     if(message.body === "hola mundo") {
         client.sendMessage(message.from, "Hola soy un bot")
     }
