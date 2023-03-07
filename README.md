@@ -1,7 +1,7 @@
 # whatsapp-turnos
 Turnos con bot de whatsapp
 
-## Instalar librerias
+## Instalar dependencias
 ```
 npm i
 ```
