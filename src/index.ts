@@ -4,6 +4,7 @@ import app from "./app"
 import { botClient } from "./bot-client"
 import { getShifts } from "./controllers/shift.controllers"
 import { AppDataSource } from "./db"
+import { shiftFindAll } from "./services/shift.service"
 
 async function main() {
 
@@ -15,6 +16,9 @@ async function main() {
         app.listen(3030)
 
         console.log("Server on port 3030")
+
+        const shifts = await shiftFindAll()
+        console.log(shifts)
 
         //BOT WHATSAPP
         botClient()

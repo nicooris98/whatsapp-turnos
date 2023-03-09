@@ -1,3 +1,5 @@
+import { shiftFindAll } from "./services/shift.service";
+
 const qrcode = require('qrcode-terminal');
 
 const { Client, LocalAuth } = require('whatsapp-web.js');
@@ -15,8 +17,9 @@ export const botClient = () => {
         console.log('Client is ready!');
     });
 
-    client.on("message", (message: any) => {
+    client.on("message", async (message: any) => {
         if (message.body === "1") {
+            const shifts = await shiftFindAll()
             client.sendMessage(message.from, "Hola soy un bot")
         }
 
