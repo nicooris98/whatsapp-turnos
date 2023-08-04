@@ -1,3 +1,4 @@
+require('dotenv').config({ path: './.env' });
 const qrcode = require('qrcode-terminal');
 
 const { Client, LocalAuth } = require('whatsapp-web.js');
